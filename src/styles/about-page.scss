@@ -1,0 +1,138 @@
+@mixin mobile {
+  @media (max-width: 620px) {
+    @content;
+  }
+}
+
+.about-page {
+  padding-top: 130px;
+  background: white;
+
+  > div:nth-child(3),
+  > div:nth-child(4) {
+    padding: 48px 135px 96px;
+
+    @include mobile {
+      padding: 40px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      color: #191919;
+    }
+  }
+
+  > div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 1090px) {
+      flex-direction: column-reverse;
+    }
+
+    @include mobile {
+      img {
+        width: 300px;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  > div:nth-child(4) {
+    background: #fafafa;
+    margin-top: 50px;
+
+    > div:first-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 1070px) {
+        flex-direction: column;
+      }
+
+      p {
+        margin: 10px 0;
+        width: 565px;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+
+      h3 {
+        font-weight: 700;
+        font-size: 28px;
+      }
+    }
+
+    > h3 {
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      margin-top: 50px;
+
+      &:nth-child(4) {
+        font-weight: 500;
+        font-size: 18px;
+
+        @media (max-width: 545px) {
+          text-align: start;
+        }
+      }
+    }
+
+    > div:nth-child(3) {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      @media (max-width: 1000px) {
+        justify-content: center;
+      }
+
+      > div {
+        padding: 20px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        background: #ffffff;
+        border-radius: 8px;
+        margin-bottom: 10px;
+
+        @media (max-width: 500px) {
+          width: 100%;
+          margin: initial auto;
+        }
+
+        h3 {
+          font-weight: 700;
+          font-size: 20px;
+          color: #191919;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 18px;
+          color: #191919;
+        }
+      }
+    }
+  }
+}

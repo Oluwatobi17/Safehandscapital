@@ -1,0 +1,30 @@
+.open-parent {
+    background-color: #FFFFFF;
+    width: 95%;
+    margin: {
+        left: auto;
+        right: auto;
+        bottom: 20px;
+    }
+    padding: 25px;
+    border-radius: 10px;
+
+    > div:first-child {
+        margin-bottom: 30px;
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+
+    > div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
