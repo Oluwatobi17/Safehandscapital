@@ -100,7 +100,7 @@ function Login() {
             <a
               href="https://evergreenffx.com/old/password-reset"
               target="_blank"
-              className="text-[#00C805]"
+              className="text-[#0088cc]"
             >
               Forgot Password
             </a>
@@ -117,7 +117,7 @@ function Login() {
                 to="/create"
                 style={{
                   textDecoration: "none",
-                  color: "#00C805",
+                  color: "#0088cc",
                   fontFamily: "DM Sans",
                   fontWeight: "700",
                 }}

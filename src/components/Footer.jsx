@@ -67,7 +67,7 @@ function Footer() {
       </p>
 
       <div className="footer_max_width">
-        <p>&copy; 2025 Safehands. All rights reserved</p>
+        <p>&copy; 2025 Safehands Capital. All rights reserved</p>
         <div className="socials">
           <a href="https://www.instagram.com/evergreen_ffx/">
             <img src={instagram} alt="image" />

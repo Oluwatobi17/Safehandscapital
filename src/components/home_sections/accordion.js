@@ -1,15 +1,15 @@
 export const accordion = [
   {
+    id: 2,
+    question: "How To Get Started?",
+    answer:
+      "Sign up with any broker of your choosing or go with the one we recommend (and we don't recommend rubbish). Fund your account with a minimum of $1,000. Proceed to safehandscapital.com and sign up and pay the registration fee to activate your account (we wave payment of registration fee when you use any our recommended brokers). Connect your account to our trading software (account connection is very easy but if you encounter any challenge kindly message support). Sit back and let our trading software trade for you.",
+  },
+  {
     id: 1,
     question: "How Much Does It Cost To Get Started??",
     answer:
-      "To subscribe to Safehands, new users are expected to pay a subscription fee of $30 in order to be able to connect their accounts to our trading AI.This subscription fee however, is a one-time payment.",
-  },
-  {
-    id: 2,
-    question: "What is Safehands Profit Sharing?",
-    answer:
-      "At the end of each trading month (20 trading days after subscription), you are required to pay 20% of the profit made that month to Safehands. This profit share is used for the maintenance of our trading AI so that we can provide our users with the best trading experience. ",
+      "To subscribe to Safehands, new users are expected to pay a one-time registration fee of $188 in order to be able to connect their accounts to our trading software. Subsequently, the user pays $30 monthly subscription. However, users that trade with our recommended broker will get registration fee waver.",
   },
   {
     id: 3,

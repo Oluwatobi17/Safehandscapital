@@ -159,9 +159,9 @@ const MobileToolbar = () => {
           <li>
             <Link to={"/about"}>About</Link>
           </li>
-          <li>
+          {/*<li>
             <a href="https://evergreenffx.com/blog">Blog</a>
-          </li>
+          </li>*/}
           <li>
             <Link to={"/contact-us"}>Contact</Link>
           </li>

@@ -82,7 +82,7 @@ function CreateAccount() {
               <Link
                 style={{
                   textDecoration: "none",
-                  color: "#00C805",
+                  color: "#0088cc",
                   fontFamily: "DM Sans",
                 }}
                 to="/login"

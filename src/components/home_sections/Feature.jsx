@@ -17,9 +17,9 @@ const Feature = () => {
           <div className="features">
             <article className="feature_card feature_card_1">
               <div className="feature_card_text">
-                <h2>Reliable AI</h2>
+                <h2>Reliable Trading Software</h2>
                 <p>
-                  Our carefully crafted AI helps you win at Forex irrespective
+                  Our carefully crafted trading software helps you win at Forex irrespective
                   of the market condition. You do not have to worry about
                   learning how the forex market works. Become a star trader
                   without doing the trading.
@@ -33,7 +33,7 @@ const Feature = () => {
               <div className="feature_card_text">
                 <h2>Automated Trading System</h2>
                 <p>
-                  While your money stays in your broker account, our AI has been
+                  While your money stays in your broker account, our trading software has been
                   designed to execute and close trades on your account. You do
                   not have to worry about trading while carrying out your daily
                   activities.
@@ -76,7 +76,7 @@ const Feature = () => {
                 <h2>Detailed reporting</h2>
                 <p>
                   With a concise data dashboard, monitor your trades and
-                  earnings, withdrawals, rankings, and referrals.
+                  earnings, withdrawals, and referrals.
                 </p>
               </div>
               <div className="feature_card_img">
@@ -88,9 +88,7 @@ const Feature = () => {
                 <h2>Earn on referrals</h2>
                 <p>
                   At Safehands Capital, we like to appreciate our customers for the
-                  new connections created by them. Earn a 30% commission on your
-                  1st level referral, a 7% commission on your 2nd level referral
-                  and a 3% commission on your 3rd level referrals.
+                  new connections created by them. Earn a 20% commission on each referral.
                 </p>
               </div>
               <div className="feature_card_img">
