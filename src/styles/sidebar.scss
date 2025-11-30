@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=DM Sans");
+
+$primary: #00855d;
+$font: "DM Sans";
+
+@mixin tablet {
+  @media (max-width: 806px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 470px) {
+    @content;
+  }
+}
+
+.toggle {
+  transition: 0.3s linear;
+  @include tablet {
+    left: -100%;
+  }
+}
+.show_sidebar {
+  transition: 0.3s linear;
+  @include tablet {
+    left: 0%;
+  }
+}
+.side-parent {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 16px;
+  gap: 16px;
+  width: 238px;
+  height: fit-content;
+  background: #ffffff;
+  border: 1px solid #fafafa;
+  font-family: $font;
+  position: sticky;
+  top: 0;
+  @include tablet {
+    position: fixed;
+    top: 0;
+    width: 320px;
+    height: 100vh;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    z-index: 99999;
+    overflow-y: scroll;
+  }
+  @include mobile {
+    width: 70%;
+  }
+
+  .active {
+    position: relative;
+    background-color: #0088cc;
+    border-radius: 8px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -2px;
+      width: 3px;
+      height: 22px;
+      transform: translateY(-50%);
+      background: #000;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+    a {
+      color: #191919;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #aeaeae;
+  }
+
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    img {
+      margin-bottom: 30px;
+    }
+
+    .icon {
+      font-size: 30px;
+      position: relative;
+      top: 15px;
+      cursor: pointer;
+      display: none;
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+
+  .line {
+    width: 206px;
+    height: 0px;
+    border: 1px solid #f2f2f2;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+}
+
+.side-div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 12px 24px;
+  isolation: isolate;
+  width: 206px;
+  height: 48px;
+  img {
+    margin-right: 16px;
+  }
+}
+
+.logout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 16px;
+  width: 206px;
+  height: 56px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}

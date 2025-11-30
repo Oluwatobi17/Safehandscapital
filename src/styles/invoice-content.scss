@@ -1,0 +1,78 @@
+@mixin mobile {
+  @media (max-width: 430px) {
+    @content;
+  }
+}
+
+.table-parent {
+  @include mobile {
+    display: none;
+  }
+  .invoice-search {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      margin-top: 5px;
+      @media (max-width: 415px) {
+        font-size: 16px !important;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #d1d1d1;
+      border-radius: 8px;
+      width: 250px;
+      height: 40px;
+      padding: 10px;
+      overflow: hidden;
+      @media (max-width: 415px) {
+        width: 200px;
+
+        > img {
+          width: 15px;
+          position: relative;
+          right: 5px;
+        }
+      }
+
+      input {
+        flex: 1;
+        height: inherit;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+          color: #8b8b8b;
+        }
+      }
+    }
+  }
+}
+.mobile_table {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+
+.invoice-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  button {
+    background: #0088cc;
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    box-shadow: 1px 1px black;
+  }
+}

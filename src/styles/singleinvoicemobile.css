@@ -1,0 +1,115 @@
+.single_invoice_section {
+  padding: 0 6%;
+  margin-top: 20px;
+}
+.single_invoice_content-topbar {
+  margin-bottom: 24px;
+}
+.single_invoice_content-topbar div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.single_invoice_content-topbar div img {
+  margin-right: 16px;
+}
+.single_invoice_content-topbar div p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.single_invoice_content-topbar p span {
+  color: #0088cc;
+}
+.print_btn {
+  width: 96px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.print_btn img {
+  margin-right: 7.5px;
+}
+.single_invoice_content_body {
+  background-color: #fff;
+  padding: 16px;
+}
+.single_invoice_content_body-header {
+  margin-bottom: 34px;
+}
+.s_i_c_b-h-logo {
+  margin-bottom: 24px;
+}
+.s_i_c_b-h-info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.s_i_c_b-h-info-row p:nth-child(1) {
+  width: 35%;
+  font-size: 16px;
+  font-weight: 700;
+}
+.s_i_c_b-h-info-row p:nth-child(2) {
+  width: 65%;
+  font-size: 18px;
+}
+.single_invoice_user_info {
+  margin-bottom: 24px;
+}
+.info_tag {
+  font-size: 14px;
+  color: #aeaeae;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.user_contact_name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.single_invoice_user_contact_info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.single_invoice_user_contact_info-row img {
+  margin-right: 10px;
+}
+
+.single_invoice_bill_summary {
+  margin-bottom: 32px;
+}
+.single_invoice_bill_summary p {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.single_invoice_bill_summary h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.single_invoice_bill_summary .referral-custom button {
+  margin-right: auto;
+}
+
+.single_invoice_fees {
+  border-bottom: 1px solid #aeaeae;
+  margin-bottom: 14px;
+}
+.single_invoice_fees_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+.single_invoice_fees_row p:nth-child(1) {
+  font-size: 14px;
+  font-weight: 700;
+}
+.single_invoice_total p:nth-child(2) {
+  font-weight: 700;
+}

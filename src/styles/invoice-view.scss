@@ -1,0 +1,278 @@
+@mixin mobile {
+  @media (max-width: 580px) {
+    @content;
+  }
+}
+
+.view-container {
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.view-header {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      @include mobile {
+        font-size: 16px;
+      }
+
+      span {
+        color: #0088cc;
+        font-weight: 700;
+      }
+    }
+  }
+
+  > button {
+    width: 96px;
+    gap: 8px;
+    background: #0088cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border-width: 0.5px 2px 2px 0.5px;
+    border-style: solid;
+    border-color: #191919;
+  }
+}
+
+.view-content {
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.view-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mobile {
+    flex-direction: column;
+  }
+
+  > div:first-child {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    p {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    > div:nth-child(2) {
+      p {
+        font-weight: 400;
+        font-size: 16px;
+      }
+      p:last-child {
+        text-align: right;
+        color: #f2cc33;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.view-pay {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  > div:first-child {
+    > p,
+    div {
+      margin-bottom: 10px;
+    }
+
+    > p:first-child {
+      font-weight: 700;
+      font-size: 14px;
+      color: #aeaeae;
+    }
+
+    > p:nth-child(2) {
+      font-weight: 500;
+      font-size: 18px;
+      color: #191919;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      > p {
+        font-weight: 400;
+        font-size: 14px;
+        color: #191919;
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  > div:nth-child(2) {
+    p:first-child {
+      font-weight: 700;
+      font-size: 16px;
+      color: #212121;
+      text-align: right;
+    }
+
+    p:nth-child(2) {
+      text-align: right;
+      font-weight: 700;
+      font-size: 40px;
+      margin-bottom: 10px;
+      @include mobile {
+        font-size: 20px;
+        text-align: right;
+      }
+    }
+
+    > button {
+      width: 155px;
+      padding: 10px 0;
+      gap: 8px;
+      background: #0088cc;
+      text-align: center;
+      border-radius: 8px;
+      border: none;
+      border-width: 0.5px 2px 2px 0.5px;
+      border-style: solid;
+      border-color: #191919;
+      cursor: pointer;
+      @include mobile {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.view-table {
+  width: 100%;
+  margin-top: 50px;
+  text-align: left;
+  border-collapse: collapse;
+
+  @include mobile {
+    display: none;
+  }
+
+  th {
+    font-weight: 700;
+    font-size: 16px;
+    color: #8b8b8b;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid rgb(213, 213, 213);
+    padding: 15px;
+    @include mobile {
+      padding: 5px;
+    }
+  }
+
+  tr:last-child td {
+    border: none;
+  }
+
+  .text {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  td {
+    font-weight: 400;
+    font-size: 14px;
+    color: #191919;
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}
+
+.bottom-table {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 50px;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  @include mobile {
+    display: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  th p {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid rgb(213, 213, 213);
+    padding: 15px;
+    padding-right: 100px;
+    @include mobile {
+      padding: 10px;
+    }
+  }
+
+  tr:last-child td {
+    border: none;
+  }
+}
+.single_invoice_table_action {
+  display: flex;
+  @include mobile {
+    display: none;
+  }
+}
+.single_invoice_section {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+.view-pay .referral-custom {
+  padding: 0;
+}

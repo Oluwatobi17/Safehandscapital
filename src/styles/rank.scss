@@ -1,0 +1,46 @@
+.rank {
+  width: 95% !important;
+  margin: initial 0 !important;
+
+  > div {
+    > div:first-child {
+      span {
+        color: white;
+      }
+
+      p {
+        width: 325px !important;
+        @media (max-width: 900px) {
+          width: 240px !important;
+        }
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        progress {
+          accent-color: white;
+          height: 20px;
+          width: 250px;
+        }
+      }
+    }
+
+    > div:last-child {
+      img {
+        width: 190px !important;
+        @media (max-width: 520px) {
+          width: 120px !important;
+        }
+
+        &.img {
+          position: relative;
+          top: -20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}

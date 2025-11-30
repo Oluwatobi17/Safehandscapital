@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=DM Sans");
+
+@mixin mobile {
+  @media (max-width: 1040px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1050px) and (min-width: 701px) {
+    @content;
+  }
+}
+
+.side {
+  width: 50%;
+  @include mobile {
+    display: none;
+  }
+  .auth_slides_wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #fafafa;
+
+    .auth_slides {
+      &-slide {
+        display: grid;
+        place-items: center;
+        min-height: 400px;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+      &-btns {
+        display: flex;
+        justify-content: center;
+        img {
+          margin: 0 13px;
+          cursor: pointer;
+        }
+        button {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #d9d9d9;
+          margin: 0 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease-in-out;
+        }
+        button.active {
+          background-color: #0088cc;
+        }
+      }
+    }
+  }
+}
