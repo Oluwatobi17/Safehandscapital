@@ -1,0 +1,149 @@
+.mobile_table {
+  padding: 0 6%;
+}
+.mobile_table_wrapper {
+  background-color: #fff;
+  padding: 24px 16px;
+}
+.mobile_table_wrapper h1 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+.mobile_table_content_header {
+  display: flex;
+  align-items: center;
+}
+.mobile_table_content_header h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #8b8b8b;
+  letter-spacing: 0.1px;
+  padding: 1rem 0;
+  border-bottom: 1px solid #8b8b8b;
+}
+.mobile_table_content_header.bonus h2:nth-child(1) {
+  width: 64%;
+}
+.mobile_table_content_header.bonus h2:nth-child(2) {
+  width: 30%;
+}
+
+.mobile_table_content_header h2:nth-child(1) {
+  width: 50%;
+}
+.mobile_table_content_header h2:nth-child(2) {
+  width: 50%;
+}
+.table-item {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.3s linear;
+  overflow: hidden;
+  opacity: 1;
+}
+.table-item.collapsed {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.mobile_table_content_body-header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.account_id {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #8b8b8b;
+}
+.account_id img {
+  margin-right: 10px;
+}
+.account_id.bonus_rank {
+  width: 64%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #8b8b8b;
+}
+.account_action {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #8b8b8b;
+  padding: 1rem 0;
+}
+.account_action img {
+  width: 26px;
+  height: 26px;
+  margin-left: 35px;
+}
+.account_id p {
+  font-size: 14px;
+}
+.account_action.bonus_action {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #8b8b8b;
+  padding: 1rem 0;
+}
+.account_action .cta_btn {
+  width: 63px;
+  height: 36px;
+}
+.account_info_row {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  align-items: center;
+}
+.account_info_row.bonus_row {
+  margin-left: 40px;
+}
+.account_info_row p {
+  width: 100%;
+  font-size: 14px;
+}
+.account_info_row p:nth-child(1) {
+  color: #8b8b8b;
+  font-weight: 700;
+}
+.account_action .switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  border-radius: 2rem;
+  transition: all 0.3s linear;
+  margin-bottom: -2px;
+}
+
+.account_action .switch > .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+  transition: all 0.3s linear;
+}
+.account_action .switch > .slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}

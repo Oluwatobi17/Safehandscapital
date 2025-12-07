@@ -1,0 +1,271 @@
+@mixin tablet {
+  @media (max-width: 975px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 570px) {
+    @content;
+  }
+}
+
+.profile-parent {
+  background: #ffffff;
+  width: 600px;
+  height: fit-content;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 10px 10000px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 500px;
+  transition: all 0.5s;
+  display: none;
+  z-index: 1000000;
+  @include tablet {
+    width: 500px;
+  }
+
+  @media (max-width: 880px) {
+    left: 50px;
+    top: -300px;
+  }
+
+  @media (max-width: 670px) {
+    left: -50px;
+  }
+
+  @include mobile {
+    width: 320px;
+  }
+
+  @media (max-width: 390px) {
+    left: -90px;
+  }
+
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(213, 213, 213);
+
+    p {
+      cursor: pointer;
+      margin-bottom: 15px;
+      width: 64px;
+      text-align: center;
+    }
+
+    .paddings {
+      margin-bottom: 0px;
+    }
+
+    .active {
+      color: #0088cc;
+      font-weight: 700;
+      border-bottom: 1px solid #0088cc;
+    }
+  }
+}
+
+.profile-content {
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+
+    p {
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    input {
+      border: 1px solid #d1d1d1;
+      border-radius: 8px;
+      width: 326px;
+      height: 48px;
+      padding: 20px;
+      outline: none;
+      color: #696969;
+      @include tablet {
+        width: 250px;
+      }
+      @include mobile {
+        width: 180px;
+      }
+
+      &:focus {
+        border-color: #0088cc;
+      }
+    }
+  }
+
+  > div:nth-child(4) {
+    display: flex;
+    justify-content: end;
+
+    button {
+      background: #0088cc;
+      border: none;
+      border-width: 0.5px 2px 2px 0.5px;
+      border-style: solid;
+      border-color: #191919;
+      border-radius: 8px;
+      width: 124px;
+      height: 44px;
+      cursor: pointer;
+    }
+  }
+
+  &.account {
+    > div {
+      h3 {
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+      div {
+        p {
+          margin: 5px 0;
+        }
+      }
+    }
+    > div:nth-child(2) {
+      div {
+        text-align: start;
+        p {
+          position: relative;
+          right: 95px;
+        }
+      }
+    }
+
+    > div:nth-child(3) {
+      .wallet {
+        > p,
+        > input {
+          margin-bottom: 12px;
+        }
+        main {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+
+          p {
+            color: #0088cc;
+            font-size: 13px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .wallet-otp {
+        position: relative;
+
+        p {
+          position: absolute;
+          color: #aeaeae;
+          font-weight: 400;
+          font-size: 12px;
+          top: 0px;
+          left: 15px;
+        }
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 18px;
+      color: #080c10;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: #696969;
+    }
+
+    .special {
+      color: #0088cc;
+      font-weight: 400;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:nth-child(2) {
+        text-align: start;
+      }
+    }
+
+    .email {
+      p {
+        @include mobile {
+          text-align: end;
+          padding-right: 2px;
+        }
+      }
+      > div {
+        display: flex;
+        justify-content: flex-start;
+        @include mobile {
+          justify-content: flex-end;
+        }
+      }
+      p {
+        color: #191919;
+        font-weight: 400;
+        margin-bottom: 10px;
+
+        span {
+          color: #696969;
+        }
+      }
+
+      button {
+        background: #0088cc;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-right: 5px;
+        transition: 0.7s;
+
+        &:first-child {
+          background: #ffffff;
+        }
+
+        &:hover{
+          opacity: 0.7;
+        }
+      }
+
+      .password {
+        position: relative;
+        width: 326px;
+        margin-bottom: 10px;
+        @include tablet {
+          width: 250px;
+        }
+        @include mobile {
+          width: 180px;
+        }
+      }
+    }
+  }
+}

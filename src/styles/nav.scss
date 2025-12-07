@@ -1,0 +1,143 @@
+@mixin mobile {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid gainsboro;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(209, 209, 209, 0.5);
+  backdrop-filter: blur(20px);
+  z-index: 20;
+  .toolbar {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1440px;
+    width: 88%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include mobile {
+      justify-content: space-between;
+      // padding: 0px 20px;
+    }
+    .toolbar_dsk_logo {
+      @include mobile {
+        display: none;
+      }
+    }
+    .toolbar_mobile_logo {
+      display: none;
+      @include mobile {
+        display: block;
+        width: 100px;
+        height: 88px;
+
+        overflow: hidden;
+        img {
+          position: absolute;
+          top: 16px;
+          left: 0;
+          transform: scale(2.5);
+          width: 40px;
+        }
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      transition: all 1s;
+      @include mobile {
+        position: absolute;
+        background: #0088cc;
+        flex-direction: column;
+        height: 100vh;
+        top: -1000px;
+        left: 0;
+        right: 0;
+        gap: 40px;
+        justify-content: center;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 14px;
+        color: #191919;
+        @include mobile {
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        &.active {
+          color: #0088cc;
+          @include mobile {
+            color: #191919;
+          }
+        }
+      }
+
+      .times {
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        display: none;
+        cursor: pointer;
+        @include mobile {
+          display: block;
+        }
+      }
+    }
+
+    > div:nth-child(4) {
+      display: flex;
+      align-items: center;
+      @include mobile {
+        gap: 20px;
+      }
+    }
+
+    button {
+      width: 140px;
+      height: 44px;
+      margin: 0 10px;
+      border-radius: 8px;
+      border-width: 0.5px 2px 2px 0.5px;
+      border-style: solid;
+      border-color: #191919;
+      border-radius: 8px;
+      background-color: #0088cc;
+      cursor: pointer;
+
+      &:first-child {
+        background: white;
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    .bars {
+      display: none;
+      cursor: pointer;
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}

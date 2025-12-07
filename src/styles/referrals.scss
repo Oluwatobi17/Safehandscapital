@@ -1,0 +1,144 @@
+@mixin tablet {
+  @media (max-width: 1050px) {
+    @content;
+  }
+}
+
+.referral-custom {
+  // width: 95%;
+  padding: 0 40px;
+  margin: 20px auto !important;
+  @include tablet {
+    padding: 0;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 18px;
+    color: #191919;
+    @include tablet {
+      padding: 0 40px;
+    }
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+
+    @media (max-width: 1310px) {
+      margin: 20px 0 !important;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      > div:first-child {
+        margin: auto;
+      }
+      > div:first-child {
+        width: 95%;
+        border-width: 0.5px 2px 2px 0.5px;
+        border-style: solid;
+        border-color: #191919;
+        border-radius: 16px;
+        margin: 0;
+      }
+      > div:nth-child(2) {
+        width: 45%;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 10px;
+        border-width: 0.5px 2px 2px 0.5px;
+        border-style: solid;
+        border-color: #191919;
+        border-radius: 16px;
+      }
+      > div:nth-child(3) {
+        width: 45%;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        margin: 0;
+        padding: 10px;
+        border-width: 0.5px 2px 2px 0.5px;
+        border-style: solid;
+        border-color: #191919;
+        border-radius: 16px;
+      }
+    }
+
+    > div:first-child {
+      background-color: #0088cc;
+    }
+
+    > .hal-ref:first-child {
+      @media (max-width: 1050px) {
+        width: 90% !important;
+      }
+    }
+
+    > .hal-ref {
+      @media (max-width: 1050px) {
+        width: 44% !important;
+      }
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      width: 240px;
+      height: 90px;
+      background: #ffff;
+      border-width: 0.5px 2px 2px 0.5px;
+      border-style: solid;
+      border-color: #191919;
+      border-radius: 16px;
+
+      p {
+        color: #191919;
+      }
+
+      p:first-child {
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      p:nth-child(2) {
+        font-weight: 600;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.referral-people {
+  background-color: #ffffff;
+  padding: 15px;
+  width: 95%;
+  margin: 30px auto;
+  text-align: center;
+  border-radius: 10px;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #191919;
+  }
+}
+.withdrawButton {
+  width: 95px;
+  height: 44px;
+  cursor: pointer;
+  border-color: #191919;
+  background: #0088cc;
+  border-width: 0.5px 2px 2px 0.5px;
+  border-style: solid;
+  border-color: #191919;
+  border-radius: 8px;
+}

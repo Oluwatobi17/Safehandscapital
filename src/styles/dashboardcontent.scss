@@ -1,0 +1,67 @@
+@mixin mobile {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
+#expired{
+  color: red;
+}
+.renewButton{
+  padding: 8px 10px;
+  color: green;
+}
+.renewButton:hover{
+  opacity: 0.8;
+}
+.content-parent {
+  background-color: #ffffff;
+  width: 95%;
+  margin: 20px auto;
+  padding: 10px;
+  overflow-y: scroll;
+
+  h3 {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid rgb(213, 213, 213);
+  }
+
+  th {
+    padding: 20px 0 20px 0;
+  }
+
+  td {
+    padding: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #191919;
+    @include mobile {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+
+  tr:last-child td {
+    border: none;
+  }
+
+  th {
+    color: #8b8b8b;
+    font-weight: 700;
+    font-size: 16px;
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}

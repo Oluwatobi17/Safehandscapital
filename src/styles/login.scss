@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content_container{
+    width: 88%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+#form_error{
+    color: red;
+    font-size: 15px;
+}
+$primary: #0088cc;
+$custom-bgcolor: #ffff;
+$font: "DM Sans";
+
+@mixin mobile {
+    @media (max-width:1040px) {
+        @content;
+    }
+}
+
+@mixin small-screen {
+    @media (max-width: 635px) {
+        @content;
+    }
+}
+
+
+.auth_page_wrapper{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    
+.login-main {
+    width: 50%;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+        width: 100%;
+        align-items: center;
+    }
+    .login-main-content{
+        width: 100%;
+        padding: 0 10%;
+        @include mobile {
+            padding: 0 6%;
+        }
+        .logo_img{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+           }
+        
+            .header {
+                margin-top: 20px;
+                text-align: left;
+                @include mobile{
+                    width: 100%;
+                    text-align: left;
+                }
+                h2 {
+                    color: #191919;
+                    font: {
+                        size: 1.75rem;
+                        weight: 700;
+                        family: $font;
+                    }
+                }
+                p {
+                    margin-top: 3px;
+        
+                    font: {
+                        size: 18px;
+                        family: $font;
+                    }
+                    color: #8B8B8B;
+                }
+            }
+        
+            form {
+                width: 100%;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+        
+                div:first-child, div:nth-child(2), div:nth-child(3), div:nth-child(4) {
+                    border: 1px solid #D1D1D1;
+                    border-radius: 8px;
+                    padding: 8px 16px;
+                    height: 56px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    text-align: center;
+                    position: relative;
+                    margin-bottom: 15px;
+                    @include mobile {
+                        width: 100%;
+                    }
+        
+                    p {
+                        font-family: $font;
+                        font-size: 10px;
+                        position: absolute;
+                        top: 3px;
+                        color: #AEAEAE;
+                    }
+        
+                    input {
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        padding-bottom: 5px;
+                        background-color: inherit;
+                    }
+                }
+        
+                div:first-child{
+                    margin-bottom: 24px;
+                }
+        
+                .password {
+                    .see-pass {
+                        width: 1.25rem;
+                        position: absolute;
+                        right: 8px;
+                        top: 20px;
+                        color: gray;
+                        cursor: pointer;
+                    }
+        
+                    p:last-child {
+                        color: $primary;
+                    }
+                }
+        
+                > p {
+                    color: $primary;
+                    position: relative;
+                    top: -10px;
+                    font-size: 0.8125rem;
+                    font-family: $font;
+                    cursor: pointer;
+                    text-align: left;
+                }
+        
+                button {
+                    width: 240px;
+                    height: 40px;
+                    background-color: $primary;
+                    border: none;
+                    border-radius: 8px;
+                    color: #191919;
+                    font-weight: bold;
+                    font-size: 16px;
+                    text-align: center;
+                    margin: 20px 0;
+                    cursor: pointer;
+                    transition: 0.7s;
+                    
+                    button:hover{
+                        opacity: 0.7;
+                    }
+        
+                    @include mobile{
+                        width: 100%;
+                    }
+                }
+        
+                .last-content {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+        
+                    p {
+                        font-family: $font;
+                        color: #696969;
+                        font-size: 0.875rem;
+                    }
+        
+                    p:last-child {
+                        cursor: pointer;
+                        
+                        a {
+                            color: $primary;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+    }
+
+}
+  }

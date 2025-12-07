@@ -1,0 +1,133 @@
+@mixin tablet {
+  @media (max-width: 535px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+.selectAccount{
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 20px 0px;
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+}
+.add-parent {
+  background-color: #ffffff;
+  //   width: 500px;
+  //   height: 500px;
+  //   padding: 20px;
+  margin: auto;
+  //   display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  //   position: relative;
+  //   top: -400px;
+  //   z-index: 1000;
+  //   box-shadow: 0 0 10px 10000px rgba(0, 0, 0, 0.5);
+  //   animation: 1s add;
+  @include tablet {
+    width: 350px;
+  }
+  @include mobile {
+    width: 310px;
+  }
+
+  > div {
+    width: 90%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: black;
+      font-size: 20px;
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  form {
+    width: 100%;
+    text-align: center;
+
+    div:nth-child(3) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #aeaeae;
+      font-size: 12px;
+      //   position: relative;
+      //   top: -15px;
+      //   left: -130px;
+      @include tablet {
+        left: -60px;
+      }
+      @include mobile {
+        left: -45px;
+      }
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    div:not(div:nth-child(3)) {
+      border: 1px solid #d1d1d1;
+      border-radius: 8px;
+      padding: 8px 16px;
+      width: 90%;
+      height: 48px;
+      display: flex;
+      justify-content: start;
+      align-items: flex-end;
+      text-align: center;
+      position: relative;
+      margin: auto;
+      margin-bottom: 15px;
+
+      p {
+        font-size: 10px;
+        position: absolute;
+        top: 3px;
+        color: #aeaeae;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        width: 100%;
+
+        padding-top: 5px;
+      }
+    }
+
+    button {
+      background-color: #0088cc;
+      color: #191919;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      border-width: 0.5px 2px 2px 0.5px;
+      border-style: solid;
+      border-color: #191919;
+      margin: 10px;
+      @include tablet {
+        width: 95%;
+      }
+    }
+  }
+}

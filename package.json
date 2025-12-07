@@ -1,0 +1,49 @@
+{
+  "name": "evergreenffx",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.7",
+    "@lottiefiles/react-lottie-player": "^3.5.0",
+    "axios": "^1.2.1",
+    "framer-motion": "^8.0.2",
+    "html2canvas": "^1.4.1",
+    "js-cookie": "^3.0.1",
+    "jspdf": "^2.5.1",
+    "jwt-decode": "^4.0.0",
+    "moment": "^2.30.1",
+    "mui-tel-input": "^3.1.3",
+    "otp-input-react": "^0.3.0",
+    "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "react-joyride": "^2.5.3",
+    "react-paginate": "^8.1.4",
+    "react-phone-number-input": "^3.2.20",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "react-select": "^5.7.0",
+    "react-spinners": "^0.13.7",
+    "react-toastify": "^9.1.1",
+    "react-use": "^17.4.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2",
+    "sass": "^1.56.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4",
+    "vite": "^3.2.3"
+  }
+}

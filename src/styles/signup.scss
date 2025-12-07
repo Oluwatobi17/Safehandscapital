@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=DM Sans");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin tablet {
+  @media (max-width: 1070px) and (min-width: 1051px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 1040px) {
+    @content;
+  }
+}
+
+$primary: #0088cc;
+$custom-bgcolor: #d1d1d1;
+$font: "DM Sans";
+
+.parent {
+  display: flex;
+  min-height: 100vh;
+}
+
+.signup-main {
+  width: 50%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  background-color: #fff;
+
+  @include mobile {
+    width: 100%;
+    margin-top: 0 !important;
+  }
+  // img {
+  //   margin: 0 0 30px;
+  //   width: 10.625rem;
+  // }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .circle {
+    width: 2rem;
+    height: 2rem;
+    background-color: $custom-bgcolor;
+    margin: 2px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.75rem;
+    font-family: "Mulish";
+  }
+
+  .circle-one {
+    background-color: $primary;
+    position: relative;
+    left: 2px;
+  }
+
+  .circle-two {
+    background-color: $primary;
+    position: relative;
+    left: -2px;
+  }
+
+  .circle-three {
+    background-color: $primary;
+    position: relative;
+    left: -6px;
+  }
+
+  .dash {
+    width: 1.875rem;
+    height: 1px;
+    background-color: $custom-bgcolor;
+  }
+
+  .dash-two {
+    position: relative;
+    left: -4px;
+  }
+
+  .header {
+    margin-top: 20px;
+    text-align: left;
+    h2 {
+      color: #191919;
+      font: {
+        size: 1.175rem;
+        weight: 700;
+        family: $font;
+      }
+    }
+    p {
+      margin-top: 3px;
+      font: {
+        size: 1.125rem;
+        family: $font;
+      }
+      color: #8b8b8b;
+    }
+  }
+
+  form {
+    margin-top: 20px;
+    width: 100%;
+    .weird {
+      border-radius: 8px;
+      // padding: 8px 16px;
+      width: 100% !important;
+      height: 3.5rem;
+      display: flex;
+      justify-content: start;
+      // align-items: flex-end;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      margin-bottom: 15px;
+      p {
+        font-family: $font;
+        font-size: 0.625rem;
+        padding: 8px;
+        position: absolute;
+        top: 3px;
+        color: #aeaeae;
+      }
+    }
+    > div {
+      border: 1px solid #d1d1d1;
+      border-radius: 8px;
+      padding: 8px 16px;
+      width: 100% !important;
+      height: 3.5rem;
+      display: flex;
+      justify-content: start;
+      align-items: flex-end;
+      text-align: center;
+      position: relative;
+      margin-bottom: 15px;
+
+      @include tablet {
+        width: 30rem;
+      }
+
+      p {
+        font-family: $font;
+        font-size: 0.625rem;
+        position: absolute;
+        top: 3px;
+        color: #aeaeae;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        width: 100%;
+        background-color: inherit;
+        padding-bottom: 5px;
+      }
+    }
+
+    .password {
+      .see-pass {
+        width: 1.25rem;
+        position: absolute;
+        right: 8px;
+        top: 20px;
+        color: gray;
+        cursor: pointer;
+      }
+    }
+
+    .btns {
+      width: 240px;
+      height: 52px;
+      background-color: $primary;
+      border: none;
+      border-radius: 8px;
+      color: #191919;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      margin: 20px 0;
+      cursor: pointer;
+      box-shadow: 1.5px 1.5px #191919;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  .strength {
+    display: flex;
+    gap: 4px;
+    margin-left: 0.3125rem;
+    width: 80%;
+
+    p {
+      font: {
+        size: 0.8125rem;
+        family: $font;
+      }
+      color: #191919;
+    }
+    p:last-child {
+      color: $primary;
+      font-weight: bold;
+    }
+  }
+
+  .lines {
+    display: flex;
+
+    div {
+      width: 6.25rem;
+      height: 4px;
+      background-color: $custom-bgcolor;
+      margin: 5px;
+      border-radius: 8px;
+    }
+  }
+}
+.signup-main-content {
+  width: 100%;
+  padding: 0 10%;
+  @include mobile {
+    padding: 0 6%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .parent {
+    text-align: center;
+    .include {
+      display: none;
+    }
+  }
+
+  .signup-main {
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 570px) {
+  .signup-main {
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      > div {
+        width: 28rem;
+        height: 3rem;
+      }
+
+      .password {
+        .see-pass {
+          width: 1.15rem;
+          top: 15px;
+        }
+      }
+    }
+
+    .strength {
+      justify-content: flex-start;
+      text-align: start;
+      margin-left: -8px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-main {
+    form {
+      > div {
+        width: 18rem;
+        height: 3rem;
+      }
+    }
+
+    .lines {
+      div {
+        width: 5rem;
+        height: 2px;
+      }
+    }
+  }
+}
+.MuiTelInput-Flag {
+  // width: 100%;
+  // position: absolute;
+  // top: 0px;
+}
+// .MuiTelInput-TextField {
+//   text-emphasis: none;
+// }
+// .MuiTelInput-IconButton {
+//   width: 60px;
+//   // height: 100%;
+//   display: flex;
+//   align-items: center;
+// }
