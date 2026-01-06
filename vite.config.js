@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react'
 // })
 
 export default defineConfig({
-  base: '/',
+  base: '/Safehandscapital',
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 5500, // Adjust limit in kBs (default is 500)
