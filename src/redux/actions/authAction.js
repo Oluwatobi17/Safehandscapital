@@ -109,6 +109,36 @@ export const signin =
       });
     }
   };
+export const forgetPassword =
+  (email, navigate, toast) => async (dispatch) => {
+    const my_data = { email };
+    
+    // dispatch({ type: SIGNIN_REQUEST, payload: my_data });
+    try {
+      const data = await axios.post(
+        `${url}/api/resetpass/`, my_data
+      );
+      // dispatch({ type: SIGNIN_SUCCESS, payload: data.data });
+      if (data.status==200) {
+        
+        // dispatch({ type: SIGNIN_SUCCESS, payload: res.data });
+        navigate("/login");
+      }else{
+        toast.error("User Not Found!");
+      }
+    } catch (error) { 
+      toast.error("User Not Found!");
+
+      dispatch({
+        type: SIGNIN_FAILURE,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.data,
+      });
+    }
+  };
+
 export const regEmail = (email, navigate, toast) => async (dispatch) => {
   dispatch({ type: REGISTER_EMAIL_REQUEST, payload: { email } });
   try {

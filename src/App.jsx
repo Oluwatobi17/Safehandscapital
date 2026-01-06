@@ -34,6 +34,7 @@ import Privacy from "./pages/Privacy";
 import TrackPayment from "./pages/TrackPayment";
 import Leaderboard from "./pages/Leaderboard";
 import NotFoundPage from './pages/NotFoundPage';
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   const Authed = useSelector((state) => state.token);
@@ -53,6 +54,7 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="verify" element={<Verify />} />
           <Route path="login" element={<Login />} />
+          <Route path="forgotpassword" element={<ForgotPassword />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
         <Route

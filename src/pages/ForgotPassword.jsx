@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { IoEyeOutline } from "react-icons/io5";
 import { FiEyeOff } from "react-icons/fi";
 import "../styles/login.scss";
-import { signin } from "../redux/actions/authAction";
+import { forgetPassword } from "../redux/actions/authAction";
 import { useDispatch, useSelector } from "react-redux";
 import { ClipLoader } from "react-spinners";
 import { toast, ToastContainer } from "react-toastify";
@@ -13,41 +13,33 @@ import { useEffect } from "react";
 
 let hasLoaded = false;
 
-function Login() {
-  const [seePass, setSeePass] = useState(false);
-  const [password, setPassword] = useState("");
+function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [IsError, setError] = useState(false);
-  const passwordInput = useRef("");
+  const [IsLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  
-  const seePassword = () => {
-    setSeePass(true);
-    passwordInput.current.type = "text";
-  };
-
-  const hidePassword = () => {
-    setSeePass(false);
-    passwordInput.current.type = "password";
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     hasLoaded = true;
-    dispatch(signin(email, password, navigate, toast));
+    // console.log(IsLoading);
+    if(IsLoading) return;
+
+    setIsLoading(true);
+    
+    dispatch(forgetPassword(email, navigate, toast));
+    setTimeout(()=> setIsLoading(false), 5000)
   };
   const Authed = useSelector((state) => state.token);
   const userInform = useSelector((state) => state.userInformation);
   const { loading, error } = userInform;
-  const getUser = () => {
-    if (Authed != null) {
-      navigate("/dashboard/home");
-    }
-  };
-  useEffect(() => {
-    getUser();
-  }, []);
+
+  // useEffect(() => {
+  //   if(IsError) setIsLoading(false);
+    
+  //   if(IsError) setTimeout(()=> setError(false), 5000);
+  // }, [IsError]);
 
   useEffect(() => {
     if(hasLoaded && loading==false) setError(true);
@@ -75,9 +67,9 @@ function Login() {
             <img src={logo_img} alt="logo" />
           </div>
           <div className="header">
-            <h2>Login to your account</h2>
-            <p>Log into your dashboard to keep track of your earnings.</p>
-            {IsError && <p id="form_error">Invalid Login</p>}
+            <h2>Forgot Password</h2>
+            <p>Reset your Safehands Capital account password.</p>
+            {/* {IsError && <p id="form_error">Invalid Email</p>} */}
           </div>
           <form onSubmit={handleSubmit} autoComplete="off">
             <div>
@@ -90,61 +82,43 @@ function Login() {
                 required
               />
             </div>
-            <div className="password">
-              <p>Password</p>
-              <input
-                type="password"
-                className="pass"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                ref={passwordInput}
-                required
-              />
-              <i>
-                {seePass ? (
-                  <FiEyeOff className="see-pass" onClick={hidePassword} />
-                ) : (
-                  <IoEyeOutline className="see-pass" onClick={seePassword} />
-                )}
-              </i>
-            </div>
             <Link
-                to="/forgotpassword"
+                to="/login"
                 style={{
-                  textDecoration: "none",
-                  color: "#0088cc",
-                  fontFamily: "DM Sans",
-                  fontWeight: "700",
+                    textDecoration: "none",
+                    color: "#0088cc",
+                    fontFamily: "DM Sans",
+                    fontWeight: "700",
                 }}
-              >
-              Forgot Password
+                >
+                I have an account and I know my password?
             </Link>
-            {!loading ? (
-              <button type="submit">Login</button>
+            {!IsLoading ? (
+              <button type="submit">Reset Password</button>
             ) : (
               <button>
                 <ClipLoader size={22} />
               </button>
             )}
-            <div className="last-content">
-              <p>New on our platform?</p>
-              <Link
+            
+          </form>
+          <p>New on our platform? 
+                <Link
                 to="/create"
                 style={{
-                  textDecoration: "none",
-                  color: "#0088cc",
-                  fontFamily: "DM Sans",
-                  fontWeight: "700",
+                    textDecoration: "none",
+                    color: "#0088cc",
+                    fontFamily: "DM Sans",
+                    fontWeight: "700",
                 }}
-              >
-                Create an account
-              </Link>
-            </div>
-          </form>
+                >
+                &nbsp; Create an account
+                </Link>
+            </p>
         </div>
       </main>
     </div>
   );
 }
 
-export default Login;
+export default ForgotPassword;
