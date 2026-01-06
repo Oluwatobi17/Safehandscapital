@@ -7,16 +7,7 @@ import react from '@vitejs/plugin-react'
 // })
 
 export default defineConfig({
-  plugins: [react()],
   build: {
-    chunkSizeWarningLimit: 3500, // 1.5MB
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['antd', 'lodash', 'moment'],
-        }
-      }
-    }
+    chunkSizeWarningLimit: 3500, // Adjust limit in kBs (default is 500)
   }
 })
